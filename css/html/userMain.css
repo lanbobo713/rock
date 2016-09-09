@@ -1,0 +1,27 @@
+body{
+    font-size : 12px;
+    color : #999;
+    font-family : "Arial, Helvetica, sans-serif";
+}
+.rt{
+    float : right;
+}
+.fl{
+    float : left;
+}
+header{
+    width : 80%;
+    height : 34px;
+    margin : 0px auto;
+}
+nav{
+    width : 100%;
+    height : 64px;
+}
+aside{
+  height : 1099px;  
+}
+article{
+    width : 80%;
+    margin : 0px auto;
+}

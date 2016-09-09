@@ -1,0 +1,133 @@
+<!doctype html>
+<head>
+    <title>收费合同</title>
+    <meta charset = 'utf-8'>
+    <link rel = 'stylesheet' href = ''>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <style>
+        table{
+            margin-left : 50px;
+            width : 80%;
+        }
+        body{
+            font-size : 12px;
+            color : #5d5d5d;
+            font-family: tahoma, arial, 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei',\5b8b\4f53 , sans-serif;
+        }
+        span{
+            color : #999;
+        }
+        table tbody tr td{
+            height : 30px;
+        }
+        table tbody tr td:first-child{
+            width : 25%;
+            text-align : right;
+        }
+        table tbody tr td:last-child{
+            width : 75%;
+            padding : 10px 0px 10px 20px;
+        }
+        input.IPT{
+            height : 28px;
+            line-height: 28px;
+            padding : 0px 9px;
+            width : 190px;
+            border : 1px solid #ccc;
+        } 
+        input.wdate{
+            width : 76px;
+           
+        }
+        input.myCompany{
+            background : url('../images/select_bg3.png') no-repeat right center;
+            color : #666;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div style = "padding : 20px;">
+        <div style = "background : url('../images/divTopBg.png') repeat-x center top;border : 1px solid #e6e6e6;">
+            <iframe src = "contract/contractHead.html" width = "100%" height = "100%" frameborder="0" scrolling="no"></iframe> 
+            <table>
+                <tbody>
+                    <tr>
+                        <td>申请类型：</td>
+                        <td>合同用印-&gt;收费合同</td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <font style = "color : red;">*</font>
+                            当前合同状态：
+                        </td>
+                        <td>
+                            <input type = "radio" name = "contractState" value = "noPerform">未履行合同
+                            <input type = "radio" name = "contractState" value = "performing">履行中合同
+                            <input type = "radio" name = "contractState" value = "performEnd">履行完毕合同
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <font style = "color : red;">*</font>
+                            合同名称：
+                        </td>
+                        <td><input type = "text" class = "IPT"></td>
+                    </tr>
+                     <tr>
+                        <td><font style = "color : red;">*</font>对方名称：</td>
+                        <td><input type = "text" class = "IPT"></td>
+                    </tr>
+                     <tr>
+                        <td><font style = "color : red;">*</font>我方公司名称：</td>
+                        <td>
+                            <input type = "text" class = "IPT myCompany" value = "请选择" readonly>
+                            <span>(请确认我方名称/对方名称与上传附件中双方的名称一致)</span>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td><font style = "color : red;">*</font>是否到期续签：</td>
+                        <td>
+                            <input type = "radio" name = "dueToRenew" value = "1">是
+                            <input type = "radio" name = "dueToRenew" value = "0">否
+                            <span>(若选择是，则必须选择合同起止日期)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><font style = "color : red;">*</font>合同期限：</td>
+                        <td>
+                            <input type = "text" class = "IPT wdate">-<input type = "text" class = "IPT wdate">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <span>（如合同中未约定具体起止期限，则在下方表框中填入合同中对合同期限的约定的相应表述）</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <textarea placeholder="1000字以内" style="width:300px;height:80px;resize : none;" maxlength="1000"></textarea>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td><font style = "color : red;">*</font>合同金额：</td>
+                        <td>
+                            <input type = "text" class = "IPT"> 
+                            <font>人民币元</font>
+                            <span>(仅输入大于0的数字)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><font style = "color : red;">*</font>合同分数：</td>
+                        <td>
+                            <input type = "text" class = "IPT">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <iframe src = "contract/contractFoot.html" width = "100%" height = "380px" frameborder="0" scrolling="no"></iframe> 
+        </div>
+    </div>
+</body>

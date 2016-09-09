@@ -1,0 +1,131 @@
+<!doctype html>
+<head>
+    <meta charset = "utf-8"/>
+    <style>
+        table{
+            margin-left : 50px;
+            width : 80%;
+        }
+        body{
+            font-size : 12px;
+            color : #5d5d5d;
+            font-family: tahoma, arial, 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei',\5b8b\4f53 , sans-serif;
+        }
+        p,span{
+            color : #999;
+        }
+        table tbody tr td{
+            height : 30px;
+        }
+        table tbody tr td:first-child{
+            width : 25%;
+            text-align : right;
+        }
+        table tbody tr td:last-child{
+            width : 75%;
+            padding : 10px 0px 10px 20px;
+        }
+        input{
+            height : 28px;
+            line-height: 28px;
+            padding : 0px 9px;
+            width : 190px;
+            border : 1px solid #ccc;
+        }
+        div.btn{
+            margin : 30px auto;
+            width : 200px;
+        }
+        button{
+            height: 30px;
+            padding: 0px 15px;
+            font-size: 14px;
+            line-height: 28px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 2px;
+            margin-right: 10px;
+            background-color : #fff;
+            color : #666;
+            border : 1px solid #ccc;
+            cursor: pointer;
+            display: inline-block;
+        }
+        button.btnSubmit{ 
+            border: 1px solid #d66500;
+            background-color: #f57403;
+            color: #fff; 
+        }
+        button:hover{
+            background-color: #f57403;
+            color: #fff; 
+        }
+        div.fujian{
+            position : relative;
+        }
+        div.fujian button{
+            width : 75px;
+            height : 22px;
+            background : url('../../images/bg_007.gif') no-repeat 3px center;
+            border : 1px dashed #bcbcbc;
+            color : #888;
+            font-size : 12px;
+            padding: 0px 3px 0px 15px;
+            line-height : 22px;
+        }
+        div.fujian div{
+            width : 75px;
+            height : 22px;
+            position : absolute;
+            left : 0px;
+            top : 0px;
+            overflow : hidden;
+            opacity : 0;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    关联合同编号：
+                </td>
+                <td>
+                    <input type = "text"/>
+                    <span>(多个合同编号请用“，”隔开)</span>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <font style = "color : red;">*</font>
+                            申请说明（理由）：
+                </td>
+                <td>
+                    <textarea placeholder = "1000字以内" style="width:300px;height:80px;resize : none;" maxlength="1000"></textarea>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <font style = "color : red;">*</font>
+                            附件：
+                </td>
+                <td>
+                    <div class = "fujian">
+                        <button>上传附件</button>
+                        <div>
+                            <input type = "file"/>
+                        </div>
+                    </div>
+                    <p>
+                        合同/协议、文件，在财务（若有）、法务审批通过后，原则上：1）不能修改；2）不允许上传再次修改过的未经财务、法务确认的合同/协议、文件；若确有修改需求，请加签给上一环节的财务和法务审批人审批同意。
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class = "btn">
+        <button class = "btnSubmit">提交</button>
+        <button>暂存</button>
+    </div>
+</body>
